@@ -1,0 +1,151 @@
+import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { Input } from "@/components/ui/input"; import { Textarea } from "@/components/ui/textarea"; import { motion } from "framer-motion"; import { Scissors, Sparkles, Phone, MapPin, Instagram, MessageCircle } from "lucide-react";
+
+export default function NyweleZaLela() { return ( <div className="min-h-screen bg-black text-white font-sans">
+
+{/* HERO */}
+  <div className="relative h-[90vh] flex items-center justify-center bg-gradient-to-b from-pink-900 via-black to-black">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-center px-6"
+    >
+      <h1 className="text-5xl md:text-7xl font-bold tracking-wide">
+        Nywele za Lela
+      </h1>
+
+      <p className="mt-4 text-lg text-gray-300">
+        Luxusný afro & moderný hair styling salón
+      </p>
+
+      <p className="mt-4 text-sm text-gray-400 max-w-2xl mx-auto">
+        SK: Ako profesionálny salón vytvárame úžasné účesy – vrkočíky, moderné aj tradičné štýly. Zameriavame sa na kvalitu, precíznosť a starostlivosť o zdravie vlasov. Každý zákazník odchádza s dokonalým a sebavedomým vzhľadom.
+        <br/><br/>
+        SW: Tunatengeneza mitindo ya nywele ya ajabu – pamoja na braids (nywele zilizofumwa), mitindo ya kisasa na ya jadi. Tunazingatia ubora, usahihi na huduma ya kitaalamu. Kila mteja anaondoka akiwa na muonekano mzuri na wa kujiamini.
+      </p>
+
+      <div className="mt-6 text-pink-300 font-semibold">
+        Motto SK: Vaše vlasy sú u nás v bezpečí
+        <br/>
+        Motto SW: Nywele zako ziko salama kwetu
+      </div>
+
+      <div className="flex flex-col md:flex-row gap-3 justify-center mt-6">
+        <Button className="bg-pink-400 text-black hover:bg-pink-300">
+          Rezervovať termín
+        </Button>
+
+        <a href="https://wa.me/421900000000" target="_blank">
+          <Button className="bg-green-500 hover:bg-green-400 flex gap-2">
+            <MessageCircle size={18} /> WhatsApp
+          </Button>
+        </a>
+      </div>
+
+      <div className="flex justify-center gap-4 mt-4 text-pink-300">
+        <Instagram /> @nywele.za.lela
+      </div>
+    </motion.div>
+  </div>
+
+  {/* SERVICES */}
+  <div className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+    <Card className="bg-zinc-900 border-zinc-800">
+      <CardContent className="p-6 text-center">
+        <Scissors className="mx-auto mb-3" />
+        <h2 className="text-xl font-semibold">Strihanie vlasov</h2>
+        <p className="text-gray-400">Moderné aj tradičné štýly</p>
+      </CardContent>
+    </Card>
+
+    <Card className="bg-zinc-900 border-zinc-800">
+      <CardContent className="p-6 text-center">
+        <Sparkles className="mx-auto mb-3" />
+        <h2 className="text-xl font-semibold">Zapletanie</h2>
+        <p className="text-gray-400">Braids, cornrows, custom účesy</p>
+      </CardContent>
+    </Card>
+
+    <Card className="bg-zinc-900 border-zinc-800">
+      <CardContent className="p-6 text-center">
+        <Sparkles className="mx-auto mb-3" />
+        <h2 className="text-xl font-semibold">Starostlivosť</h2>
+        <p className="text-gray-400">Kúry a regenerácia vlasov</p>
+      </CardContent>
+    </Card>
+  </div>
+
+  {/* CENNÍK */}
+  <div className="py-16 px-6 bg-zinc-950">
+    <h2 className="text-3xl text-center mb-8 font-bold">Cenník</h2>
+    <div className="max-w-3xl mx-auto space-y-3 text-gray-300">
+      <div className="flex justify-between border-b border-zinc-800 pb-2">
+        <span>Strihanie</span><span>15€</span>
+      </div>
+      <div className="flex justify-between border-b border-zinc-800 pb-2">
+        <span>Cornrows</span><span>40€+</span>
+      </div>
+      <div className="flex justify-between border-b border-zinc-800 pb-2">
+        <span>Box braids</span><span>60€+</span>
+      </div>
+    </div>
+  </div>
+
+  {/* GALÉRIA */}
+  <div className="py-16 px-6 max-w-6xl mx-auto">
+    <h2 className="text-3xl text-center mb-8 font-bold">Galéria</h2>
+    <div className="grid md:grid-cols-3 gap-4">
+      <div className="h-48 bg-pink-900 rounded-xl"></div>
+      <div className="h-48 bg-zinc-800 rounded-xl"></div>
+      <div className="h-48 bg-pink-800 rounded-xl"></div>
+    </div>
+  </div>
+
+  {/* REZERVÁCIA */}
+  <div className="py-16 px-6 bg-black border-t border-zinc-800">
+    <h2 className="text-3xl text-center mb-8 font-bold">Rezervácia</h2>
+    <div className="max-w-xl mx-auto space-y-4">
+      <Input placeholder="Meno" />
+      <Input placeholder="Telefón" />
+      <Input placeholder="Dátum" />
+      <Textarea placeholder="Poznámka" />
+      <Button className="w-full bg-pink-500 hover:bg-pink-400">
+        Odoslať rezerváciu
+      </Button>
+    </div>
+  </div>
+
+  {/* MAPA */}
+  <div className="py-16 px-6">
+    <h2 className="text-3xl text-center mb-6 font-bold">Kde nás nájdeš</h2>
+    <div className="max-w-4xl mx-auto h-64 bg-zinc-800 rounded-xl flex items-center justify-center text-gray-400">
+      Google Maps vloženie (Pezinok, Slovensko)
+    </div>
+  </div>
+
+  {/* CONTACT */}
+  <div className="py-16 bg-black border-t border-zinc-800">
+    <div className="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 className="text-2xl font-bold mb-4">Kontakt</h3>
+        <p className="flex items-center gap-2 text-gray-300"><Phone size={18}/> +421 900 000 000</p>
+        <p className="flex items-center gap-2 text-gray-300 mt-2"><MapPin size={18}/> Pezinok, Slovensko</p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-bold mb-4">Sociálne siete</h3>
+        <a className="flex items-center gap-2 text-pink-400" href="#">
+          <Instagram size={18}/> Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {/* FOOTER */}
+  <div className="text-center py-6 text-gray-500 text-sm">
+    © {new Date().getFullYear()} Nywele za Lela. Všetky práva vyhradené.
+  </div>
+
+</div>
+
+); }

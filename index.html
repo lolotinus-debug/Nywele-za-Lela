@@ -1,37 +1,35 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="sw">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nywele za Lela</title>
+
+<title>Nywele za Lela | Luxury Afro Hair Salon</title>
 
 <style>
-body{
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
 font-family:Arial,sans-serif;
-background:#0f0f0f;
+background:#111;
 color:white;
-}
-
-header{
-background:linear-gradient(135deg,#000,#2a002a);
-padding:80px 20px;
-text-align:center;
-}
-
-header h1{
-font-size:4rem;
-color:#ff69b4;
-margin-bottom:10px;
+line-height:1.6;
 }
 
 nav{
 position:sticky;
 top:0;
-background:#111;
+z-index:1000;
+background:#000;
 padding:15px;
 text-align:center;
-z-index:1000;
+border-bottom:1px solid #333;
 }
 
 nav a{
@@ -39,164 +37,354 @@ color:white;
 text-decoration:none;
 margin:0 15px;
 font-weight:bold;
+transition:.3s;
 }
 
-.lang{
-position:absolute;
-right:20px;
-top:15px;
+nav a:hover{
+color:#ff69b4;
+}
+
+header{
+background:
+linear-gradient(
+rgba(0,0,0,.75),
+rgba(0,0,0,.75)
+),
+url('images/hero.jpg');
+background-size:cover;
+background-position:center;
+text-align:center;
+padding:120px 20px;
+}
+
+header h1{
+font-size:4rem;
+color:#ff69b4;
+margin-bottom:20px;
+}
+
+header p{
+max-width:800px;
+margin:auto;
+font-size:1.1rem;
+color:#ddd;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
 }
 
 section{
-padding:60px 20px;
+padding:80px 20px;
+}
+
+.container{
 max-width:1200px;
 margin:auto;
 }
 
 h2{
-color:#ff69b4;
 text-align:center;
-margin-bottom:30px;
+margin-bottom:40px;
+color:#ff69b4;
+font-size:2rem;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-}
-
-.gallery img{
-width:100%;
-border-radius:15px;
-}
-
-.pricing{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+.services{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 gap:20px;
 }
 
 .card{
 background:#1c1c1c;
-padding:20px;
+padding:25px;
 border-radius:15px;
+width:300px;
+box-shadow:0 0 15px rgba(255,105,180,.15);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card h3{
 color:#ff69b4;
+margin-bottom:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:15px;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+.prices{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.price-card{
+background:#1c1c1c;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.price-card h3{
+color:#ff69b4;
+margin-bottom:10px;
 }
 
 form{
+max-width:700px;
+margin:auto;
 display:flex;
 flex-direction:column;
 gap:15px;
-max-width:600px;
-margin:auto;
 }
 
-input,textarea{
-padding:12px;
+input,
+textarea{
+padding:15px;
 border:none;
-border-radius:8px;
+border-radius:10px;
 }
 
 button{
 padding:15px;
+border:none;
 background:#ff69b4;
 color:white;
-border:none;
-border-radius:8px;
-font-size:16px;
+border-radius:10px;
 cursor:pointer;
+font-size:16px;
 }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-color:white;
-font-weight:bold;
+.hours{
+background:#1a1a1a;
+padding:30px;
+border-radius:15px;
+text-align:center;
 }
 
-iframe{
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:10px 0;
+}
+
+.map iframe{
 width:100%;
-height:400px;
+height:450px;
 border:none;
 border-radius:15px;
 }
 
 footer{
-text-align:center;
 padding:30px;
-background:#111;
-color:#aaa;
+text-align:center;
+background:#000;
+color:#999;
+margin-top:50px;
 }
+
+@media(max-width:768px){
+
+header h1{
+font-size:2.5rem;
+}
+
+.card,
+.price-card{
+width:100%;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <nav>
-<a href="#home">Domov</a>
-<a href="#gallery">Galéria</a>
-<a href="#pricing">Cenník</a>
-<a href="#booking">Rezervácia</a>
-<a href="#contact">Kontakt</a>
 
-<div class="lang">
-<button onclick="alert('SK')">SK</button>
-<button onclick="alert('EN')">EN</button>
-<button onclick="alert('SW')">SW</button>
-</div>
+<a href="#home">Nyumbani</a>
+<a href="#services">Huduma</a>
+<a href="#gallery">Picha</a>
+<a href="#prices">Bei</a>
+<a href="#booking">Miadi</a>
+<a href="#contact">Mawasiliano</a>
+
 </nav>
 
 <header id="home">
+
 <h1>Nywele za Lela</h1>
-<p>Luxusný afro beauty salón pre braids, cornrows, dreadlocks a moderné afro účesy.</p>
+
+<p>
+
+Karibu kwenye saluni ya kisasa ya nywele za Afro.
+Tunatoa Box Braids, Knotless Braids, Cornrows,
+Dreadlocks, huduma za watoto na matunzo ya nywele
+kwa kiwango cha juu.
+
+</p>
+
+<a
+href="https://wa.me/421900000000"
+class="btn">
+WhatsApp
+</a>
+
 </header>
 
+<section id="services">
+
+<div class="container">
+
+<h2>Huduma Zetu</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>💇🏾 Box Braids</h3>
+<p>Mitindo ya kisasa na ya kudumu.</p>
+</div>
+
+<div class="card">
+<h3>🌿 Cornrows</h3>
+<p>Cornrows za kisasa na za kifahari.</p>
+</div>
+
+<div class="card">
+<h3>✨ Knotless Braids</h3>
+<p>Muonekano wa asili na mwepesi.</p>
+</div>
+
+<div class="card">
+<h3>🦁 Dreadlocks</h3>
+<p>Kuanzisha na kutunza dreadlocks.</p>
+</div>
+
+<div class="card">
+<h3>👧 Nywele za Watoto</h3>
+<p>Mitindo mizuri kwa watoto.</p>
+</div>
+
+<div class="card">
+<h3>🧴 Matunzo ya Nywele</h3>
+<p>Kuosha, kutibu na kulinda nywele.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
 <section id="gallery">
-<h2>Galéria</h2>
+
+<div class="container">
+
+<h2>Picha za Kazi Zetu</h2>
 
 <div class="gallery">
 
-<img src="gallery/afro1.jpg" alt="Afro Style">
-<img src="gallery/afro2.jpg" alt="Braids">
-<img src="gallery/afro3.jpg" alt="Cornrows">
-<img src="gallery/afro4.jpg" alt="Dreadlocks">
+<img src="images/box-braids.jpg" alt="Box Braids">
+<img src="images/cornrows.jpg" alt="Cornrows">
+<img src="images/knotless-braids.jpg" alt="Knotless Braids">
+<img src="images/dreadlocks.jpg" alt="Dreadlocks">
+<img src="images/goddess-braids.jpg" alt="Goddess Braids">
+<img src="images/kids-braids.jpg" alt="Kids Braids">
+<img src="images/salon-interior-1.jpg" alt="Salon Interior">
+<img src="images/salon-interior-2.jpg" alt="Salon Interior">
+
+</div>
 
 </div>
 
 </section>
 
-<section id="pricing">
+<section id="prices">
 
-<h2>Cenník</h2>
+<div class="container">
 
-<div class="pricing">
+<h2>Bei za Huduma</h2>
 
-<div class="card">
-<h3>Box Braids</h3>
-<p>Od 50 €</p>
-</div>
+<div class="prices">
 
-<div class="card">
+<div class="price-card">
 <h3>Cornrows</h3>
-<p>Od 30 €</p>
+<p>Kuanzia €30</p>
 </div>
 
-<div class="card">
-<h3>Dreadlocks</h3>
-<p>Od 60 €</p>
+<div class="price-card">
+<h3>Box Braids</h3>
+<p>Kuanzia €50</p>
 </div>
 
-<div class="card">
+<div class="price-card">
 <h3>Knotless Braids</h3>
-<p>Od 70 €</p>
+<p>Kuanzia €70</p>
+</div>
+
+<div class="price-card">
+<h3>Dreadlocks</h3>
+<p>Kuanzia €60</p>
+</div>
+
+<div class="price-card">
+<h3>Watoto Braids</h3>
+<p>Kuanzia €25</p>
+</div>
+
+<div class="price-card">
+<h3>Matunzo ya Nywele</h3>
+<p>Kuanzia €20</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2>Saa za Kufungua</h2>
+
+<div class="hours">
+
+<p>Jumatatu - Ijumaa: 09:00 - 18:00</p>
+<p>Jumamosi: 09:00 - 16:00</p>
+<p>Jumapili: Kwa miadi maalum</p>
+
 </div>
 
 </div>
@@ -205,44 +393,91 @@ color:#aaa;
 
 <section id="booking">
 
-<h2>Rezervácia</h2>
+<div class="container">
+
+<h2>Weka Miadi</h2>
 
 <form>
-<input type="text" placeholder="Meno" required>
-<input type="tel" placeholder="Telefón" required>
-<input type="date" required>
-<textarea placeholder="Poznámka"></textarea>
-<button type="submit">Rezervovať termín</button>
+
+<input
+type="text"
+placeholder="Jina lako"
+required>
+
+<input
+type="tel"
+placeholder="Namba ya simu"
+required>
+
+<input
+type="email"
+placeholder="Barua pepe">
+
+<input
+type="date"
+required>
+
+<textarea
+rows="5"
+placeholder="Maelezo ya ziada">
+</textarea>
+
+<button type="submit">
+Tuma Ombi la Miadi
+</button>
+
 </form>
+
+</div>
 
 </section>
 
 <section id="contact">
 
-<h2>Kontakt</h2>
+<div class="container contact">
 
-<p>📞 +421 XXX XXX XXX</p>
+<h2>Mawasiliano</h2>
+
+<p>📞 +421 900 000 000</p>
+
 <p>📧 info@nywelezalela.com</p>
-<p>📍 Slovensko</p>
+
+<p>📍 Slovakia</p>
+
+<a
+href="https://wa.me/421900000000"
+class="btn">
+Tuma Ujumbe WhatsApp
+</a>
+
+</div>
 
 </section>
 
 <section>
 
-<h2>Mapa</h2>
+<div class="container map">
+
+<h2>Mahali Tulipo</h2>
 
 <iframe
 src="https://maps.google.com/maps?q=Bratislava&t=&z=13&ie=UTF8&iwloc=&output=embed">
 </iframe>
 
+</div>
+
 </section>
 
-<a class="whatsapp" href="https://wa.me/421900000000">
-WhatsApp
-</a>
-
 <footer>
+
+<p>
 © 2026 Nywele za Lela
+</p>
+
+<p>
+Saluni ya Kisasa ya Nywele za Afro
+</p>
+
 </footer>
 
 </body>

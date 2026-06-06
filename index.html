@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nywele za Lela</title>
+
+<title>Nywele za Lela | Saluni ya Nywele</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -20,144 +22,268 @@ body{
 }
 
 header{
+    background:linear-gradient(135deg,#000,#222);
     text-align:center;
     padding:80px 20px;
-    background:linear-gradient(135deg,#000,#222);
 }
 
 header h1{
-    font-size:3rem;
+    font-size:3.2rem;
     color:#ff69b4;
 }
 
 header p{
-    margin-top:15px;
+    max-width:800px;
+    margin:20px auto;
     color:#ccc;
-    max-width:700px;
-    margin-left:auto;
-    margin-right:auto;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-top:20px;
+}
+
+.whatsapp{
+    background:#25D366;
+    color:white;
 }
 
 section{
-    padding:60px 20px;
-    text-align:center;
+    padding:70px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
 }
 
 h2{
+    text-align:center;
+    margin-bottom:40px;
     color:#ff69b4;
-    margin-bottom:30px;
 }
 
 .services{
     display:flex;
     flex-wrap:wrap;
-    justify-content:center;
     gap:20px;
+    justify-content:center;
 }
 
 .card{
     background:#1e1e1e;
     padding:25px;
+    width:300px;
     border-radius:15px;
-    width:280px;
-    box-shadow:0 0 10px rgba(255,105,180,0.2);
+    box-shadow:0 0 15px rgba(255,105,180,0.15);
 }
 
 .card h3{
-    margin-bottom:10px;
     color:#ff69b4;
+    margin-bottom:10px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.hours{
+    text-align:center;
+    background:#181818;
+    border-radius:15px;
+    padding:30px;
 }
 
 .contact{
-    background:#181818;
+    text-align:center;
 }
 
-.whatsapp{
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 30px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:bold;
+.contact p{
+    margin:10px 0;
 }
 
 footer{
     text-align:center;
-    padding:20px;
-    color:#888;
+    padding:30px;
     border-top:1px solid #333;
+    color:#888;
 }
 
 @media(max-width:768px){
+
     header h1{
-        font-size:2.2rem;
+        font-size:2.3rem;
     }
 
     .card{
         width:100%;
-        max-width:320px;
     }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Nywele za Lela</h1>
-    <p>
-        Saluni ya kitaalamu ya nywele za afro, braids,
-        cornrows na mitindo ya kisasa.
-        Tunatunza uzuri wa nywele zako kwa huduma bora.
-    </p>
+
+<h1>Nywele za Lela</h1>
+
+<p>
+Karibu kwenye saluni yetu ya kitaalamu.
+Tunatoa huduma bora za nywele za afro,
+braids, cornrows, dreadlocks na mitindo ya kisasa.
+Lengo letu ni kuhakikisha kila mteja anaondoka akiwa na furaha na kujiamini.
+</p>
+
+<a href="https://wa.me/421900000000" class="btn whatsapp">
+Wasiliana kupitia WhatsApp
+</a>
+
 </header>
 
 <section>
-    <h2>Huduma Zetu</h2>
 
-    <div class="services">
+<div class="container">
 
-        <div class="card">
-            <h3>✂ Kukata Nywele</h3>
-            <p>
-                Huduma ya kitaalamu ya kukata nywele kwa wanawake,
-                wanaume na watoto.
-            </p>
-        </div>
+<h2>Huduma Zetu</h2>
 
-        <div class="card">
-            <h3>💇🏾‍♀️ Braids & Cornrows</h3>
-            <p>
-                Kusuka braids, cornrows na mitindo mbalimbali ya afro.
-            </p>
-        </div>
+<div class="services">
 
-        <div class="card">
-            <h3>✨ Matunzo ya Nywele</h3>
-            <p>
-                Kuosha, kutibu na kulinda afya ya nywele zako.
-            </p>
-        </div>
+<div class="card">
+<h3>✂ Kukata Nywele</h3>
+<p>
+Huduma ya kisasa ya kukata nywele kwa wanawake,
+wanaume na watoto.
+</p>
+</div>
 
-    </div>
+<div class="card">
+<h3>💇🏾‍♀️ Braids</h3>
+<p>
+Box Braids, Knotless Braids,
+Boho Braids na mitindo mingine.
+</p>
+</div>
+
+<div class="card">
+<h3>🌿 Cornrows</h3>
+<p>
+Mitindo tofauti ya cornrows ya kisasa
+na ya kitamaduni.
+</p>
+</div>
+
+<div class="card">
+<h3>✨ Dreadlocks</h3>
+<p>
+Kuanzisha, kutengeneza na kutunza dreadlocks.
+</p>
+</div>
+
+<div class="card">
+<h3>🧴 Matunzo ya Nywele</h3>
+<p>
+Kuosha nywele, matibabu na lishe ya nywele.
+</p>
+</div>
+
+<div class="card">
+<h3>👧 Nywele za Watoto</h3>
+<p>
+Mitindo mizuri na salama kwa watoto.
+</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="contact">
-    <h2>Mawasiliano</h2>
+<section>
 
-    <p>WhatsApp: +421 900 000 000</p>
+<div class="container">
 
-    <a class="whatsapp"
-       href="https://wa.me/421900000000"
-       target="_blank">
-       Wasiliana Nasi
-    </a>
+<h2>Galeria ya Mitindo</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800" alt="Braids">
+
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800" alt="Hair Style">
+
+<img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800" alt="Beauty">
+
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800" alt="Braids Style">
+
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800" alt="Afro Hair">
+
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800" alt="Hair Fashion">
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2>Saa za Kufungua</h2>
+
+<div class="hours">
+
+<p>Jumatatu - Ijumaa: 09:00 - 18:00</p>
+<p>Jumamosi: 09:00 - 16:00</p>
+<p>Jumapili: Kwa miadi maalum</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container contact">
+
+<h2>Mawasiliano</h2>
+
+<p>📞 +421 900 000 000</p>
+
+<p>📍 Kibada</p>
+
+<p>📧 info@nywelezalela.com</p>
+
+<a href="https://wa.me/421900000000" class="btn whatsapp">
+Tuma Ujumbe WhatsApp
+</a>
+
+</div>
+
 </section>
 
 <footer>
-    © 2026 Nywele za Lela. Haki zote zimehifadhiwa.
+
+© 2026 Nywele za Lela.
+Haki zote zimehifadhiwa.
+
 </footer>
 
 </body>

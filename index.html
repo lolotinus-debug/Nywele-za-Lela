@@ -1,289 +1,248 @@
 <!DOCTYPE html>
-<html lang="sw">
+<html lang="sk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Nywele za Lela | Saluni ya Nywele</title>
+<title>Nywele za Lela</title>
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
-    font-family:Arial, sans-serif;
-    background:#111;
-    color:white;
-    line-height:1.6;
+margin:0;
+font-family:Arial,sans-serif;
+background:#0f0f0f;
+color:white;
 }
 
 header{
-    background:linear-gradient(135deg,#000,#222);
-    text-align:center;
-    padding:80px 20px;
+background:linear-gradient(135deg,#000,#2a002a);
+padding:80px 20px;
+text-align:center;
 }
 
 header h1{
-    font-size:3.2rem;
-    color:#ff69b4;
+font-size:4rem;
+color:#ff69b4;
+margin-bottom:10px;
 }
 
-header p{
-    max-width:800px;
-    margin:20px auto;
-    color:#ccc;
+nav{
+position:sticky;
+top:0;
+background:#111;
+padding:15px;
+text-align:center;
+z-index:1000;
 }
 
-.btn{
-    display:inline-block;
-    padding:15px 30px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-    margin-top:20px;
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
 }
 
-.whatsapp{
-    background:#25D366;
-    color:white;
+.lang{
+position:absolute;
+right:20px;
+top:15px;
 }
 
 section{
-    padding:70px 20px;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
+padding:60px 20px;
+max-width:1200px;
+margin:auto;
 }
 
 h2{
-    text-align:center;
-    margin-bottom:40px;
-    color:#ff69b4;
-}
-
-.services{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    justify-content:center;
-}
-
-.card{
-    background:#1e1e1e;
-    padding:25px;
-    width:300px;
-    border-radius:15px;
-    box-shadow:0 0 15px rgba(255,105,180,0.15);
-}
-
-.card h3{
-    color:#ff69b4;
-    margin-bottom:10px;
+color:#ff69b4;
+text-align:center;
+margin-bottom:30px;
 }
 
 .gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
 }
 
 .gallery img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-    border-radius:15px;
+width:100%;
+border-radius:15px;
 }
 
-.hours{
-    text-align:center;
-    background:#181818;
-    border-radius:15px;
-    padding:30px;
+.pricing{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-.contact{
-    text-align:center;
+.card{
+background:#1c1c1c;
+padding:20px;
+border-radius:15px;
 }
 
-.contact p{
-    margin:10px 0;
+.card h3{
+color:#ff69b4;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:600px;
+margin:auto;
+}
+
+input,textarea{
+padding:12px;
+border:none;
+border-radius:8px;
+}
+
+button{
+padding:15px;
+background:#ff69b4;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+iframe{
+width:100%;
+height:400px;
+border:none;
+border-radius:15px;
 }
 
 footer{
-    text-align:center;
-    padding:30px;
-    border-top:1px solid #333;
-    color:#888;
+text-align:center;
+padding:30px;
+background:#111;
+color:#aaa;
 }
-
-@media(max-width:768px){
-
-    header h1{
-        font-size:2.3rem;
-    }
-
-    .card{
-        width:100%;
-    }
-
-}
-
 </style>
 </head>
 
 <body>
 
-<header>
+<nav>
+<a href="#home">Domov</a>
+<a href="#gallery">Galéria</a>
+<a href="#pricing">Cenník</a>
+<a href="#booking">Rezervácia</a>
+<a href="#contact">Kontakt</a>
 
+<div class="lang">
+<button onclick="alert('SK')">SK</button>
+<button onclick="alert('EN')">EN</button>
+<button onclick="alert('SW')">SW</button>
+</div>
+</nav>
+
+<header id="home">
 <h1>Nywele za Lela</h1>
-
-<p>
-Karibu kwenye saluni yetu ya kitaalamu.
-Tunatoa huduma bora za nywele za afro,
-braids, cornrows, dreadlocks na mitindo ya kisasa.
-Lengo letu ni kuhakikisha kila mteja anaondoka akiwa na furaha na kujiamini.
-</p>
-
-<a href="https://wa.me/421900000000" class="btn whatsapp">
-Wasiliana kupitia WhatsApp
-</a>
-
+<p>Luxusný afro beauty salón pre braids, cornrows, dreadlocks a moderné afro účesy.</p>
 </header>
 
-<section>
-
-<div class="container">
-
-<h2>Huduma Zetu</h2>
-
-<div class="services">
-
-<div class="card">
-<h3>✂ Kukata Nywele</h3>
-<p>
-Huduma ya kisasa ya kukata nywele kwa wanawake,
-wanaume na watoto.
-</p>
-</div>
-
-<div class="card">
-<h3>💇🏾‍♀️ Braids</h3>
-<p>
-Box Braids, Knotless Braids,
-Boho Braids na mitindo mingine.
-</p>
-</div>
-
-<div class="card">
-<h3>🌿 Cornrows</h3>
-<p>
-Mitindo tofauti ya cornrows ya kisasa
-na ya kitamaduni.
-</p>
-</div>
-
-<div class="card">
-<h3>✨ Dreadlocks</h3>
-<p>
-Kuanzisha, kutengeneza na kutunza dreadlocks.
-</p>
-</div>
-
-<div class="card">
-<h3>🧴 Matunzo ya Nywele</h3>
-<p>
-Kuosha nywele, matibabu na lishe ya nywele.
-</p>
-</div>
-
-<div class="card">
-<h3>👧 Nywele za Watoto</h3>
-<p>
-Mitindo mizuri na salama kwa watoto.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<h2>Galeria ya Mitindo</h2>
+<section id="gallery">
+<h2>Galéria</h2>
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800" alt="Braids">
+<img src="gallery/afro1.jpg" alt="Afro Style">
+<img src="gallery/afro2.jpg" alt="Braids">
+<img src="gallery/afro3.jpg" alt="Cornrows">
+<img src="gallery/afro4.jpg" alt="Dreadlocks">
 
-<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800" alt="Hair Style">
+</div>
 
-<img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800" alt="Beauty">
+</section>
 
-<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800" alt="Braids Style">
+<section id="pricing">
 
-<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800" alt="Afro Hair">
+<h2>Cenník</h2>
 
-<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800" alt="Hair Fashion">
+<div class="pricing">
 
+<div class="card">
+<h3>Box Braids</h3>
+<p>Od 50 €</p>
+</div>
+
+<div class="card">
+<h3>Cornrows</h3>
+<p>Od 30 €</p>
+</div>
+
+<div class="card">
+<h3>Dreadlocks</h3>
+<p>Od 60 €</p>
+</div>
+
+<div class="card">
+<h3>Knotless Braids</h3>
+<p>Od 70 €</p>
 </div>
 
 </div>
 
 </section>
 
-<section>
+<section id="booking">
 
-<div class="container">
+<h2>Rezervácia</h2>
 
-<h2>Saa za Kufungua</h2>
-
-<div class="hours">
-
-<p>Jumatatu - Ijumaa: 09:00 - 18:00</p>
-<p>Jumamosi: 09:00 - 16:00</p>
-<p>Jumapili: Kwa miadi maalum</p>
-
-</div>
-
-</div>
+<form>
+<input type="text" placeholder="Meno" required>
+<input type="tel" placeholder="Telefón" required>
+<input type="date" required>
+<textarea placeholder="Poznámka"></textarea>
+<button type="submit">Rezervovať termín</button>
+</form>
 
 </section>
 
-<section>
+<section id="contact">
 
-<div class="container contact">
+<h2>Kontakt</h2>
 
-<h2>Mawasiliano</h2>
-
-<p>📞 +421 900 000 000</p>
-
-<p>📍 Kibada</p>
-
+<p>📞 +421 XXX XXX XXX</p>
 <p>📧 info@nywelezalela.com</p>
+<p>📍 Slovensko</p>
 
-<a href="https://wa.me/421900000000" class="btn whatsapp">
-Tuma Ujumbe WhatsApp
+</section>
+
+<section>
+
+<h2>Mapa</h2>
+
+<iframe
+src="https://maps.google.com/maps?q=Bratislava&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</section>
+
+<a class="whatsapp" href="https://wa.me/421900000000">
+WhatsApp
 </a>
 
-</div>
-
-</section>
-
 <footer>
-
-© 2026 Nywele za Lela.
-Haki zote zimehifadhiwa.
-
+© 2026 Nywele za Lela
 </footer>
 
 </body>

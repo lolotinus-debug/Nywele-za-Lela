@@ -1,41 +1,164 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="sw">
 <head>
-  <meta charset="UTF-8">
-  <title>Nywele za Lela</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nywele za Lela</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#111;
+    color:white;
+    line-height:1.6;
+}
+
+header{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(135deg,#000,#222);
+}
+
+header h1{
+    font-size:3rem;
+    color:#ff69b4;
+}
+
+header p{
+    margin-top:15px;
+    color:#ccc;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+h2{
+    color:#ff69b4;
+    margin-bottom:30px;
+}
+
+.services{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    background:#1e1e1e;
+    padding:25px;
+    border-radius:15px;
+    width:280px;
+    box-shadow:0 0 10px rgba(255,105,180,0.2);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#ff69b4;
+}
+
+.contact{
+    background:#181818;
+}
+
+.whatsapp{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 30px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#888;
+    border-top:1px solid #333;
+}
+
+@media(max-width:768px){
+    header h1{
+        font-size:2.2rem;
+    }
+
+    .card{
+        width:100%;
+        max-width:320px;
+    }
+}
+</style>
 </head>
 
-<body style="margin:0; font-family:sans-serif; background:black; color:white;">
+<body>
 
-  <div style="text-align:center; padding:60px;">
-    <h1 style="font-size:50px;">Nywele za Lela</h1>
-
-    <p style="color:#aaa;">
-      SK: Luxusný kadernícky salón pre afro a moderné účesy <br>
-      SW: Saluni ya kitaalamu ya nywele za afro na mitindo ya kisasa
+<header>
+    <h1>Nywele za Lela</h1>
+    <p>
+        Saluni ya kitaalamu ya nywele za afro, braids,
+        cornrows na mitindo ya kisasa.
+        Tunatunza uzuri wa nywele zako kwa huduma bora.
     </p>
+</header>
 
-    <h3 style="color:pink;">
-      Vaše vlasy sú u nás v bezpečí
-    </h3>
-  </div>
+<section>
+    <h2>Huduma Zetu</h2>
 
-  <div style="text-align:center; padding:40px;">
-    <h2>Služby</h2>
-    <p>✂ Strihanie vlasov</p>
-    <p>💇🏾‍♀️ Braids / copíky / cornrows</p>
-    <p>✨ Starostlivosť o vlasy</p>
-  </div>
+    <div class="services">
 
-  <div style="text-align:center; padding:40px;">
-    <h2>Kontakt</h2>
+        <div class="card">
+            <h3>✂ Kukata Nywele</h3>
+            <p>
+                Huduma ya kitaalamu ya kukata nywele kwa wanawake,
+                wanaume na watoto.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💇🏾‍♀️ Braids & Cornrows</h3>
+            <p>
+                Kusuka braids, cornrows na mitindo mbalimbali ya afro.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>✨ Matunzo ya Nywele</h3>
+            <p>
+                Kuosha, kutibu na kulinda afya ya nywele zako.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Mawasiliano</h2>
+
     <p>WhatsApp: +421 900 000 000</p>
-  </div>
 
-  <div style="text-align:center; padding:20px; color:gray;">
-    © Nywele za Lela
-  </div>
+    <a class="whatsapp"
+       href="https://wa.me/421900000000"
+       target="_blank">
+       Wasiliana Nasi
+    </a>
+</section>
+
+<footer>
+    © 2026 Nywele za Lela. Haki zote zimehifadhiwa.
+</footer>
 
 </body>
 </html>
